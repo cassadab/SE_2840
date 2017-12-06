@@ -10,25 +10,30 @@ h1, h2, h3 {
     text-align: center;
 }
 
-ul, ol, #quote {
+.references ul {
+    padding-left: 42%;
 }
 
-
 #face {
-    margin-top: 68px;
+    display: block;
+    margin: auto;
     max-height: 200px;
     border: 2px solid black;
-    margin-left: 8%;
-    margin-right: 0;
 }
 
 .content {
-    float: right;
-    margin-right: 29%
+    background-color: moccasin;
+    margin-top: 0;
+    padding-top: 0;
+    align-content: center;
 }
 
 .contact {
     text-align: center;
+}
+hr {
+    border-color: rgba(0, 0, 0, 0.2);
+
 }
 
 .references {
