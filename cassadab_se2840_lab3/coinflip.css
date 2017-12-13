@@ -1,0 +1,26 @@
+#in_table{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+th, td {
+    padding: 5px;
+}
+
+#histogram {
+    margin-top: 5px;
+}
+
+#histogram th, td{
+    border: 1px solid black;
+}
+
+#histogram p {
+    margin: 0;
+}
+
+meter {
+    width: 800px;
+
+}

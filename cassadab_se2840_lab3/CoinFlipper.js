@@ -2,9 +2,6 @@
  * Brady Cassada
  */
 
-const numOfCoins = 5;
-const numOfReps = 100000;
-
 var frequency = [0, 0, 0, 0, 0, 0];
 
 /**
@@ -41,15 +38,24 @@ function doSingleFlip(numCoins) {
  * @param numReps - number of times each coin was flipped
  */
 function printHistogram(frequency, numCoins, numReps) {
+    document.getElementsByClassName("myMeter").value = 0;
     for(heads = 0; heads <= numCoins; heads++ ) {
-        document.write( " " + heads + "  " + frequency[heads] + "  " );
+        // document.write( " " + heads + "  " + frequency[heads] + "  " );
         var fractionOfReps = frequency[heads] / numReps;
-        var numOfAsterisks = Math.round(fractionOfReps * 100);
-        for(i=0; i < numOfAsterisks; i++ ) {
-            document.write("*");
-        }
-        document.write("<br>");
+        var id = heads + "";
+        document.getElementById(id).value = fractionOfReps;
+        // var numOfAsterisks = Math.round(fractionOfReps * 100);
+        // for(i=0; i < numOfAsterisks; i++ ) {
+        //     document.write("*");
+        // }
+        // document.write("<br>");
     }
+}
+
+function goPressed() {
+    var numOfCoins = document.getElementById("coins").value;
+    var numReps = document.getElementById("throws").value;
+    main(frequency, numOfCoins, numReps);
 }
 
 function main(frequency, numCoins, numReps) {
@@ -57,7 +63,6 @@ function main(frequency, numCoins, numReps) {
     flipCoins(frequency, numCoins, numReps);
     printHistogram(frequency, numCoins, numReps);
     var endTime = new Date().getTime();
-    document.write("Coin Flipper time: " + (endTime - startTime) + " ms");
+    // document.write("Coin Flipper time: " + (endTime - startTime) + " ms");
 }
 
-main(frequency, numOfCoins, numOfReps);

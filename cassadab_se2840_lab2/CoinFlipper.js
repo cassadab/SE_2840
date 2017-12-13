@@ -2,10 +2,8 @@
  * Brady Cassada
  */
 
-const numOfCoins = 5;
-const numOfReps = 100000;
 
-var frequency = [0, 0, 0, 0, 0, 0];
+
 
 /**
  * Carries out coin flip operations and adds to the arrays
@@ -53,6 +51,7 @@ function printHistogram(frequency, numCoins, numReps) {
 }
 
 function main(frequency, numCoins, numReps) {
+    var frequency = [0, 0, 0, 0, 0, 0];
     var startTime = new Date().getTime();
     flipCoins(frequency, numCoins, numReps);
     printHistogram(frequency, numCoins, numReps);
@@ -60,4 +59,5 @@ function main(frequency, numCoins, numReps) {
     document.write("Coin Flipper time: " + (endTime - startTime) + " ms");
 }
 
-main(frequency, numOfCoins, numOfReps);
+
+

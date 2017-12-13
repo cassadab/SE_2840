@@ -1,12 +1,61 @@
 <!--Brady Cassada-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Coin Flipper</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="coinflip.css">
+
     <script type="text/javascript" src="./CoinFlipper.js"></script>
 </head>
 <body>
-
+<div class="container">
+    <table id="in_table">
+        <tr>
+            <th>Number of coins:</th>
+            <th><input type="text" id="coins"></input></th>
+        </tr>
+        <tr>
+            <th>Number of throws:</th>
+            <th><input type="text" id="throws"></input></th>
+        </tr>
+    </table>
+    <button type="button" onclick="goPressed()">Go again</button>
+    <br/>
+    <table id="histogram">
+        <tr>
+            <th><p>0</p></th>
+            <td id="0_count">0</td>
+            <td class="myMeter"><meter id="0" value="0%"></meter></td>
+        </tr>
+        <tr>
+            <th><p>1</p></th>
+            <td id="1_count">0</td>
+            <td class="myMeter"><meter id="1" value="0%"></meter></td>
+        </tr>
+        <tr>
+            <th><p>2</p></th>
+            <td id="2_count">0</td>
+            <td class="myMeter"><meter id="2" value="0%"></meter></td>
+        </tr>
+        <tr>
+            <th><p>3</p></th>
+            <td id="3_count">0</td>
+            <td class="myMeter"><meter id="3" value="0%"></meter></td>
+        </tr>
+        <tr>
+            <th><p>4</p></th>
+            <td id="4_count">0</td>
+            <td class="myMeter"><meter id="4" value="0%"></meter></td>
+        </tr>
+        <tr>
+            <th><p>5</p></th>
+            <td id="5_count">0</td>
+            <td class="myMeter"><meter id="5" value="0%"></meter></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
