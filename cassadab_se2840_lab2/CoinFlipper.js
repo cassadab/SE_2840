@@ -5,13 +5,13 @@
 const numOfCoins = 5;
 const numOfReps = 100000;
 
-var frequency = new Array();
-var heads = 0;
+var frequency = [0, 0, 0, 0, 0, 0];
 
 
 function flipCoins(frequency, numCoins, numReps) {
+
     for(rep=0; rep < numReps; rep++) {
-        var heads = doSingleFlip(numCoins);
+        heads = doSingleFlip(numCoins);
         frequency[heads]++;
     }
     console.log(frequency);
