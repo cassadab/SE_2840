@@ -1,5 +1,5 @@
 /**
- * Created by cassadab on 12/6/2017.
+ * Brady Cassada
  */
 
 const numOfCoins = 5;
@@ -7,7 +7,12 @@ const numOfReps = 100000;
 
 var frequency = [0, 0, 0, 0, 0, 0];
 
-
+/**
+ * Carries out coin flip operations and adds to the arrays
+ * @param frequency - array of frequencies
+ * @param numCoins - number of coins to be flipped
+ * @param numReps - how many times each coin will be flipped
+ */
 function flipCoins(frequency, numCoins, numReps) {
 
     for(rep=0; rep < numReps; rep++) {
@@ -16,7 +21,11 @@ function flipCoins(frequency, numCoins, numReps) {
     }
     console.log(frequency);
 }
-
+/**
+ * Flips each coin once
+ * @param numCoins - number of coins flipped
+ * @returns {number} - how coins were heads
+ */
 function doSingleFlip(numCoins) {
     var heads = 0;
     for (i=0; i < numCoins; i++) {
@@ -25,6 +34,12 @@ function doSingleFlip(numCoins) {
     return heads;
 }
 
+/**
+ * Prints a histogram based on the frequency array
+ * @param frequency - array of frequencies
+ * @param numCoins - number of coins flipped
+ * @param numReps - number of times each coin was flipped
+ */
 function printHistogram(frequency, numCoins, numReps) {
     for(heads = 0; heads <= numCoins; heads++ ) {
         document.write( " " + heads + "  " + frequency[heads] + "  " );
